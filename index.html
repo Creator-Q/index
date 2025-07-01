@@ -1,129 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>For My Doctor ❤️</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Great+Vibes&display=swap">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #fff0f5;
-      font-family: 'Quicksand', sans-serif;
-      color: #333;
-    }
-
-    header {
-      background-color: #ff8fa3;
-      padding: 30px 20px;
-      text-align: center;
-      color: white;
-      border-bottom: 4px solid #ff5c8a;
-    }
-
-    header h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3em;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      border: 2px solid #ffe6ec;
-    }
-
-    .poem {
-      font-size: 1.2em;
-      line-height: 1.8;
-      color: #444;
-      white-space: pre-wrap;
-      padding: 20px;
-      border-left: 4px solid #ff8fa3;
-      background: #fff8fb;
-      border-radius: 10px;
-      margin-bottom: 30px;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 1em;
-      color: #777;
-    }
-
-    .icon {
-      font-size: 1.5em;
-      margin-right: 10px;
-    }
-
-    .love {
-      text-align: center;
-      font-size: 2em;
-      color: #ff4d6d;
-    }
-
-    .love::before {
-      content: "❤️ ";
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin: 20px;
-        padding: 15px;
-      }
-
-      header h1 {
-        font-size: 2.2em;
-      }
-    }
-  </style>
-</head>
 <body>
 
 <header>
   <h1>To My Doctor ❤️</h1>
-  <p>For the heartbeat of my life</p>
+  <p>You're the heartbeat of my world</p>
 </header>
 
-<div class="container">
+<!-- Cartoon Couple Section -->
+<section style="text-align: center; margin-top: 40px;">
+  <img src="https://i.imgur.com/vFcPH3I.png" alt="Engineer Male" width="180" style="margin-right: 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+  <img src="https://i.imgur.com/oMPjjqp.png" alt="Doctor Female" width="180" style="border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+</section>
+
+<section>
   <div class="poem">
 Rakh loon tujhe chhupa ke, khayalon ke khaas mahal mein,  
 Basa loon tujhe har pal mein, har ek khushi ke pal mein.
 
 Tera roothna, door rehna, phir bina baat khafa ho jaana,  
 Offline jaa kar chup rehna, mujhe khud se juda kar jaana.
+  </div>
+  <div class="love">Tere bina sab soona hai... 💗</div>
+</section>
 
+<div class="parallax"></div>
+
+<section>
+  <div class="poem">
 Is duniya se door le jaaun, jahan sirf tu aur main hoon,  
 Kisi khushbu bhare ghar mein, tujhe khwabon jaisa sajaa doon.
 
 Rakh loon tujhe main chhupa ke, dil ke kisi khaas raaz mein,  
 Aa mere paas, bator loon tujhe apni har ek saans mein.
+  </div>
+  <div class="love">Main hoon yahan... har dafa tere liye. 🩺</div>
+</section>
 
+<div class="parallax"></div>
+
+<section>
+  <div class="poem">
 Jo tu humse roothti hai, din bhar door reh kar sataati hai,  
 Haan, woh offline jaa kar chup baith jaana bhi rulati hai.
 
 Rakh loon tujhe main chhupa kar, is duniya ke shor se door,  
 Kisi chhoti si duniya mein, sajaa ke rakhun tujhe zaroor.
   </div>
-
-  <div class="love">You are my favorite medicine 💊</div>
-</div>
+  <div class="love">Tujh mein hi basi meri duniya hai... ❤️</div>
+</section>
 
 <div class="footer">
   Made with ❤️ by your biggest fan<br>
-  <span class="icon">🩺</span> Forever yours
+  <span class="icon">🩺</span> For the most beautiful doctor in the world.
 </div>
 
+<!-- Music player -->
+<audio id="bg-music" autoplay loop>
+  <source src="https://dl.dropboxusercontent.com/scl/fi/nylvn8k3zq4h2y1k4xib7/Tum-Se-Hi.mp3?rlkey=2ev06u6zzyh77yb9ckn5q3d0f&st=1xdglvkp&dl=0" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Button to control music -->
+<button id="music-controls" onclick="toggleMusic()">Pause Music</button>
+
+<script>
+  const music = document.getElementById('bg-music');
+  const btn = document.getElementById('music-controls');
+
+  function toggleMusic() {
+    if (music.paused) {
+      music.play();
+      btn.textContent = 'Pause Music';
+    } else {
+      music.pause();
+      btn.textContent = 'Play Music';
+    }
+  }
+</script>
+
 </body>
-</html>
